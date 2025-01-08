@@ -1,0 +1,44 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+<form method="post" asp-action="Create">
+    <table class="table table-bordered">
+        <tr>
+            <td> <label asp-for="CustomereId"></label> </td>
+            <td> <input asp-for="CustomereId" class="form-control" /> </td>
+
+        </tr>
+
+        <tr>
+            <td> <label asp-for="CustomereName"></label> </td>
+            <td> <input asp-for="CustomereName" class="form-control" /> </td>
+
+        </tr>
+
+        <tr>
+            <td> <label asp-for="Email"></label> </td>
+            <td> <input asp-for="Email" class="form-control" /> </td>
+
+        </tr>
+
+
+        <tr>
+            <td> <label asp-for="IsActive"></label> </td>
+            <td> <input asp-for="IsActive" class="form-control" /> </td>
+
+        </tr>
+
+        <tr>
+            <td colspan=" 2" style="text-align: right">
+                <input type="submit" class=" btn btn-primary" value="Save" />
+                <a asp-action=" GetAllCustomers" class="btn btn-warning">Cancel</a>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+

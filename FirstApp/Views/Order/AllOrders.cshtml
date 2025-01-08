@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "GetAllOrders";
+}
+
+<h1>GetAllCoustmers</h1>
+<a asp-action="Creat" asp-controller="Orders"
+   class="btn btn-primary">Create New Order</a>
+
+<table>
+    <tr>
+        <td> Product</td>
+        <td> Amount</td>
+        <td> CustomereId</td>
+        <td> CreationDate</td>
+
+
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+      
+           
+<tr>
+            <td>@customer.Product</td>
+            <td>@customer.Amount</td>
+            <td>@customer.CostomerId</td>
+            <td>@customer.CreationDate</td>
+         
+               
+
+
+
+        </tr>
+    }
+</table>
+
+
+

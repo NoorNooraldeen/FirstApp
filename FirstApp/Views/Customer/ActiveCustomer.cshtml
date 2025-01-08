@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Customer>
+@{
+    ViewData["Title"] = "GetAllCoustmers";
+}
+
+<h1> Active</h1>
+<a asp-action="Create" asp-controller="Customer"
+   class="btn btn-primary">Create New Customer</a>
+
+<table>
+    <tr>
+        <td> CustomereId</td>
+        <td> CustomereName</td>
+        <td> Email</td>
+        <td> Phone</td>
+
+
+    </tr>
+
+    @foreach (var customer in Model)
+    {
+        <tr>
+
+            <td>
+                <a asp-action="CustomersOrders"
+                   asp-controller="Orders"
+                   asp-route-id="@customer.CustomereId">
+                    @customer.CustomereName
+                </a>
+
+            </td>
+
+            <td>@customer.CustomereId</td>
+            <td>@customer.CustomereName</td>
+            <td>@customer.Email</td>
+            <td>@customer.phone</td>
+            <td>
+                <a asp-action="Details"
+                   asp-controller="Customer"
+                   asp-route-id="@customer.CustomereId"
+                   class="btn btn-primary">
+                    More Details
+                </a>
+
+
+                <a asp-action="CustmerOrders"
+                   asp-controller="Order"
+                   asp-route-id="@customer.CustomereId" class="btn btn-primary">
+                    Custmer Orders
+                </a>
+            </td>
+
+
+
+        </tr>
+    }
+</table>
+

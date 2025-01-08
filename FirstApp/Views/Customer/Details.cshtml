@@ -1,0 +1,32 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table> class="<table table-bordered"">
+    <tr>
+        <td> <label asp-for="CustomereId"></label>/td></td>
+            <td>@Model.CustomereId</td>
+    </tr>
+    <tr>
+
+        <tr>
+            <td> <label asp-for="Email"></label>/td></td>
+            <td>@Model.Email</td>
+        </tr>
+        <tr>
+        <tr>
+            <td> <label asp-for="phone"></label>/td></td>
+            <td>@Model.phone</td>
+        </tr>
+        
+        
+          
+</table>"
+   <a asp-action=" GetAllCutomers" class="btn btn-outline-info">
+       Back to Customers List
+       </a>
+
+
